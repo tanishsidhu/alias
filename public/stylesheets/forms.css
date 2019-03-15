@@ -1,0 +1,24 @@
+body
+{
+	background-image: url(../pictures/homepage.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: 'Roboto Mono', monospace;
+	color:white;
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2C3133;
+   color: white;
+   text-align: center;
+}
+.thumbnail
+{
+	 color: tomato;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 60px;
+}

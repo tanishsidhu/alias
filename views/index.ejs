@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>alias | Feed</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/indexJumbotron.css">
+    <link rel="stylesheet" href="/stylesheets/common.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Thambi">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarContent">
+      			<span class="sr-only">Toggle navigation</span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+    		</button>
+            <a href="/posts" class="navbar-brand"><i class="fas fa-rss-square"></i> Feed</a>			
+        </div>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="nav navbar-nav navbar-right">
+            	<p class="navbar-brand"><i class="fas fa-user"></i> Signed in as <span style="color: green;">@<%=user.alias%></span></p>
+              	<a href="/newpost" class="navbar-brand"><i class="fas fa-pen-alt"></i> New Post</a>
+  				<a href="/logout" class="navbar-brand"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<% if(success && success.length>0) { %>
+<div class="container" style="margin-top: 25px;">
+    <div class="alert alert-success" role="alert">
+        <%=success%>
+    </div>
+</div>
+<% } %>
+
+<div class="jumbotron">
+ 	<div>
+ 		<h1 style="color: tomato;">alias</h1>
+ 		<h4><span style="color: green;">@<%=user.alias%></span></h4>
+ 		<br>
+ 		<a href="/newpost" class="btn btn-danger">Create a new post</a>
+ 	</div>
+</div>
+
+<div class="container" style="padding-top: 15px;" >
+	<div class="row" style="display: flex; flex-wrap: wrap;">
+	<% posts.forEach(function(post){ %>
+	<div class="col-md-3 col-sm-6">
+		<div class="thumbnail">
+		<img class="card-img-top img-thumbnail" src="<%= post.image %>">
+		<div class="caption">
+		<h5 class="card-title"><b> <%= post.title %> </b></h5>
+		<small style="color: green;"> @<%=post.author.alias%> </small>
+		<p class="card-text"> <%- post.body.substring(0,150) %>...</p>
+		<a href="/posts/<%=post._id%>" class="btn btn-danger btn-block"><i class="fas fa-book-open"></i> Continue Reading</a>
+		</div>
+		</div>
+	</div>
+	<% }); %>
+	</div>
+</div>
+
+<footer>
+    <div class="container">
+        <small>Copyright © 2019 alias. All rights reserved.</small>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

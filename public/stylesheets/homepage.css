@@ -1,0 +1,33 @@
+body
+{
+	background-image: url(../pictures/homepage.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: 'Roboto Mono', monospace;
+	color:white;
+}
+#content
+{
+	text-align: center;
+	padding-top:25%; 
+}
+h1
+{
+	font-weight: 700;
+	font-size: 5em; 
+	color: tomato;
+}
+hr
+{
+	width: 300px;
+	border: 1px solid black
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2C3133;
+   color: white;
+   text-align: center;
+}

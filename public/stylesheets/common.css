@@ -1,0 +1,40 @@
+body
+{
+	background-color: #10171e;
+	padding-top: 70px;
+}
+hr
+{
+	background-color: red;
+}
+a:hover,a:link,a:visited,a:active
+{
+	padding-right: 15px;
+   font-family: 'Baloo Thambi', cursive;
+   color:white;
+   text-decoration: none;
+}
+.fa-rss-square,.fa-pen-alt,.fa-user,.fa-sign-out-alt
+{
+	size: 3em;
+	color: tomato;
+}
+label
+{
+	color:tomato;
+}
+.navbar-brand
+{
+  font-family: 'Baloo Thambi', cursive;
+  color:white;
+}
+footer
+{
+	color: white; 
+	text-align: center;
+	left: 0;
+   	bottom: 0;
+   	width: 100%;
+   	margin-top: 20px;
+   	background-color: #2C3133;
+}

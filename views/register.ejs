@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>alias | Register</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/forms.css">
+    <link rel="stylesheet" href="/stylesheets/navbarfix.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+</head>
+<body>
+
+<nav class="nav navbar-inverse navbar-fixed-top">
+      <div class="container">
+          <div class="collapse navbar-collapse off">
+            <ul class="nav navbar-nav no-collapse">
+                <li>
+                    <a href="/">alias</a>         
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right no-collapse">
+                <li>
+                    <a href="/login" >Already a user?</a>
+                </li>
+            </ul>
+          </div>
+      </div>
+</nav>
+
+<% if(error && error.length>0) { %>
+<div class="container" style="margin-top: 60px;">
+    <div class="alert alert-danger" role="alert">
+        <%=error%>
+    </div>
+</div>
+<% } %>
+
+<div class="container">
+    <div class="thumbnail">
+        <div class="caption">
+            <h3 style="text-align:center; color:tomato;">Register</h3>
+            <hr>
+            <form class="form" role="form" action="/register" method="POST">
+                <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="email" class="form-control" name="username" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <small>Copyright © 2019 alias. All rights reserved.</small>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+.jumbotron {
+    background: url(../pictures/index.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+    height: 80%;
+    text-align: center;
+    color: white;
+}
+.jumbotron div {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: rgba(190, 190, 190, .9);
+    font-family: 'Roboto Mono', monospace;
+}
